@@ -3,6 +3,8 @@
  * Focuses on lightweight IntersectionObserver to trigger CSS transitions
  */
 
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. Reveal Animations on Scroll ---
@@ -36,12 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-link');
     if (mobileToggle && mobileNav) {
         mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        mobileNav.hidden = true;
 
         mobileToggle.addEventListener('click', (e) => {
             e.preventDefault();
             const isActive = mobileToggle.classList.toggle('active');
+            mobileNav.hidden = !isActive;
             mobileNav.classList.toggle('active');
             mobileToggle.setAttribute('aria-expanded', String(isActive));
+            mobileNav.setAttribute('aria-hidden', String(!isActive));
         });
 
         // Close when clicking links
@@ -50,21 +56,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileToggle.classList.remove('active');
                 mobileNav.classList.remove('active');
                 mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileNav.setAttribute('aria-hidden', 'true');
+                mobileNav.hidden = true;
             });
         });
     }
 
-    // --- 3. Smooth Scoll offset for fixed header ---
+    // --- 3. Smooth Scroll offset for fixed header ---
+    const getHeaderOffset = () => {
+        let offset = 0;
+        const rootStyles = window.getComputedStyle(document.documentElement);
+        const headerVar = rootStyles.getPropertyValue('--header-h').trim();
+        if (headerVar) {
+            const parsed = parseFloat(headerVar);
+            if (!Number.isNaN(parsed)) {
+                offset = parsed;
+            }
+        }
+        if (!offset) {
+            const headerEl = document.querySelector('.site-header');
+            if (headerEl) {
+                offset = headerEl.getBoundingClientRect().height;
+            }
+        }
+        return offset;
+    };
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (targetId === '#') {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+                return;
+            }
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                // Minimal header padding offset
-                const offset = 80;
+                const offset = getHeaderOffset();
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - offset;
 

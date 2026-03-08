@@ -355,7 +355,7 @@ ul {
     line-height: 0.9;
     pointer-events: none;
     user-select: none;
-    opacity:0.2
+    opacity: 0.2;
 }
 
 .metrics-grid {
@@ -561,6 +561,11 @@ ul {
 }
 
 .reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.js .reveal {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity var(--transition-slow), transform var(--transition-slow);
