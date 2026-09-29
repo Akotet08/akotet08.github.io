@@ -1,3 +1,24 @@
+## Updating the website CV
+
+The website serves the CV as a static file at `assets/cv.pdf`. The “Curriculum
+vitae (PDF)” link in `index.html` points directly to this file, with no Google
+Drive permissions or external document service required.
+
+To update it, replace `assets/cv.pdf` with the latest exported PDF, keeping the
+same filename. From the repository directory, for example:
+
+```sh
+cp /path/to/latest-cv.pdf assets/cv.pdf
+```
+
+Preview the PDF locally, then commit and deploy the replacement through the
+website's normal GitHub Pages publishing process. The first deployment must
+include both `index.html` and `assets/cv.pdf`. Copying a file locally does not
+update the live website. After deployment, check
+<https://akotet08.github.io/assets/cv.pdf>; reload if the browser still shows a
+cached copy. Website biography and project entries are maintained separately
+and do not automatically change when the PDF is replaced.
+
 # 💫 About Me:
 - 👋 Hi, I’m Akotet 
 - 👀 Interested in GNNs, Federated Learning... and more
