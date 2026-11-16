@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
@@ -21,455 +21,264 @@
 
 <body id="top">
     <a class="skip-link" href="#about">Skip to content</a>
-    <!-- Persistent Header -->
-    <header class="site-header reveal fade-down">
-        <div class="header-inner">
-            <a href="#top" class="brand">akotet<span> / research & code</span></a>
-            <nav class="desktop-nav">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#research" class="nav-link">Selected Research</a>
-                <a href="#projects" class="nav-link">Projects</a>
-            </nav>
-            <a href="mailto:akiyeshaw@gmail.com" class="btn-outline">Let’s talk ↗</a>
-
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu" aria-controls="mobileNav"
-                aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Mobile Navigation Overlay -->
-    <nav class="mobile-nav" id="mobileNav" aria-hidden="true" hidden>
-        <div class="mobile-nav-inner">
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#experience" class="mobile-link">Experience</a>
-            <a href="#research" class="mobile-link">Research</a>
-            <a href="#projects" class="mobile-link">Projects</a>
-            <a href="mailto:akiyeshaw@gmail.com" class="mobile-link text-accent">Contact</a>
-        </div>
-    </nav>
-
-    <main class="main-container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-grid">
-                <div class="hero-headline reveal stagger-1">
-                    <p class="mono-label hero-eyebrow">MACHINE LEARNING RESEARCHER · KAIST</p>
-                    <h1 class="display-title">
-                        Akotet Yeshaw<br>
-                        <span class="italic">Tesema.</span>
-                    </h1>
-                    <p class="hero-intro">Exploring the connections<br>that make learning possible.</p>
-                    <a href="#research" class="primary-link">Explore my research <span>↗</span></a>
-                </div>
-                <div class="hero-meta reveal stagger-2">
-                    <div class="graph-art" aria-hidden="true">
-                        <svg viewBox="0 0 360 220" fill="none"><g stroke="currentColor" stroke-width="1"><path d="M38 114 102 42 175 102 248 38 321 108 252 179 175 102 111 187 38 114 175 102 321 108M102 42 111 187 252 179 248 38M38 114 252 179M102 42 248 38"/></g><g fill="currentColor"><circle cx="38" cy="114" r="5"/><circle cx="102" cy="42" r="7"/><circle cx="175" cy="102" r="12"/><circle cx="248" cy="38" r="5"/><circle cx="321" cy="108" r="7"/><circle cx="252" cy="179" r="9"/><circle cx="111" cy="187" r="5"/></g><circle cx="175" cy="102" r="27" stroke="currentColor" stroke-dasharray="2 5"/></svg>
-                        <span class="mono-label">Nodes. Connections. Possibilities.</span>
-                    </div>
-                    <p class="mono-label">CURRENT FOCUS</p>
-                    <p class="hero-lede">
-                        Working on generative recommendation, graph learning, and LLM sycophancy at KAIST, Seoul National University, and Equitech Futures.
-                    </p>
-                    <div class="hero-links">
-                        <a href="assets/cv.pdf" type="application/pdf"
-                            class="hover-line">Curriculum vitae (PDF) ↗</a>
-                        <a href="https://github.com/Akotet08" target="_blank" rel="noopener noreferrer"
-                            class="hover-line">GitHub ↗</a>
-                    </div>
-                </div>
+    <div class="page">
+        <header class="profile">
+            <img class="profile-portrait" src="assets/portrait.jpg" alt="Portrait of Akotet Yeshaw Tesema" width="120" height="120">
+            <div class="profile-details">
+            <h1>Akotet Yeshaw Tesema</h1>
+            <p class="profile-role">M.S. student, KAIST · Machine learning researcher</p>
+            <div class="profile-links">
+                <a href="mailto:akiyeshaw@gmail.com">Email</a>
+                <a href="assets/cv.pdf" type="application/pdf">CV (PDF)</a>
+                <a href="https://github.com/Akotet08" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/akotet-yeshaw/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
-            <!-- Research themes -->
-            <div class="hero-bottom"><span>Graph learning · Generative recommendation · LLMs</span><a href="#about">A little about me ↓</a></div>
+            </div>
+        </header>
+        <nav class="section-nav" aria-label="Page sections">
+            <a href="#about">About</a>
+            <a href="#research">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#honors">Honors</a>
+        </nav>
+        <main>
+        <section id="about" class="biography" aria-label="About">
+            <p>I’m an M.S. student in Electrical Engineering at KAIST and a visiting researcher at
+                Seoul National University, working with <a href="https://jaeminyoo.github.io/">Prof. Jaemin Yoo</a>
+                on a foundation model for generative recommendation. I’m also a research fellow at
+                Equitech Futures, studying how to evaluate and reduce sycophancy in large language models.</p>
+            <p>My research interests include recommender systems, graph neural networks, and machine learning.
+                Previously, I worked on graph collaborative filtering, prompt optimization, and time-series
+                imputation. I completed my B.S. in Computer Science with a minor in AI at KAIST in August 2025.</p>
         </section>
-
-        <!-- About Segment -->
-        <section id="about" class="about-section bordered-section">
-            <div class="content-grid">
-                <div class="col-title reveal stagger-1">
-                    <h2 class="section-title"><span>01 / ABOUT</span>Curiosity,<br>in practice.</h2>
-                </div>
-                <div class="col-content reveal stagger-2">
-                    <div class="large-body">
-                        <p>I’m pursuing an M.S. in Electrical Engineering at KAIST, after completing my
-                            B.S. in Computer Science with a minor in AI in August 2025.</p>
-                        <p>As a visiting researcher at Seoul National University, I’m developing a foundation
-                            model for generative recommendation under Prof. Jaemin Yoo. I also study LLM sycophancy
-                            as a research fellow at Equitech Futures, designing evaluations and mitigation strategies.</p>
-                        <p>My work spans graph collaborative filtering, prompt optimization, time-series imputation,
-                            and applied machine learning. I’ve also mentored Ethiopian high-school students in
-                            programming and algorithms through AddisCoder.</p>
-                    </div>
-                    <div class="metrics-grid">
-                        <div class="metric-item">
-                            <span class="metric-value">Top 20</span>
-                            <span class="metric-label">ADI scholar · 200+ applicants</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-value">10%</span>
-                            <span class="metric-label">Answer coherence gain · Enhans</span>
-                        </div>
-                        <div class="metric-item">
-                            <span class="metric-value">Top 5</span>
-                            <span class="metric-label">Customs challenge · 180 teams</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section id="research" aria-labelledby="research-heading">
+            <h2 id="research-heading">Publications</h2>
+            <article class="publication">
+                <h3>Beyond Node Degree: Learning-Driven Tailness for Graph Collaborative Filtering</h3>
+                <p><strong>Akotet Yeshaw Tesema</strong>, Biniyam Aschalew Tolera, Cheonwoo Lee, Jaemin Yoo.</p>
+                <p class="publication-status">Accepted at ACM SIGKDD (KDD) 2027.</p>
+            </article>
+            <article class="publication">
+                <h3>Structural Domain Adaptation via Operator Alignment</h3>
+                <p>Biniyam Aschalew Tolera, <strong>Akotet Yeshaw Tesema</strong>, Cheonwoo Lee, Dooho Lee, Aikta Arya, Jaemin Yoo.</p>
+                <p class="publication-status">Accepted at ACM WSDM 2027 (Main Conference).</p>
+            </article>
         </section>
-
-        <section id="experience" class="experience-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>02 / EXPERIENCE</span>The path<br>so far.</h2>
+        <section id="education" aria-labelledby="education-heading">
+            <h2 id="education-heading">Education</h2>
+            <article class="entry">
+                <p class="entry-date">Sep 2025 — Present</p>
+                <div>
+                    <h3>M.S. · Electrical Engineering</h3>
+                    <p class="organization">KAIST</p>
+                    <p class="entry-description">Research areas: recommender systems, graph neural networks, and machine learning.</p>
                 </div>
-                <div class="col-content">
-                    <div class="timeline-wrapper">
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Mar 2026 — Present</span>
-                                <span class="mono-tag">Seoul National University</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Visiting Researcher</h3>
-                                <p class="entry-desc">Developing a unified foundation model for generative recommendation, targeting in-context item-token generation across datasets. Designing the end-to-end architecture and training recipe under Prof. Jaemin Yoo.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">2026 — Present</span>
-                                <span class="mono-tag">Equitech Futures</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Research Fellow</h3>
-                                <p class="entry-desc">Researching sycophancy in large language models with faculty and associate fellows. Designing evaluations and mitigation strategies to measure and reduce models’ tendency to over-agree with users at the expense of accuracy.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Oct — Dec 2025</span>
-                                <span class="mono-tag">Equitech Futures</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Applied Data Institute Scholar</h3>
-                                <p class="entry-desc">Selected among the top 20 scholars from 200+ applicants across 80+ countries. Collaborated on a water utility dashboard for selected African countries and researched conversational echo chambers in LLMs.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Sep 2023 — Aug 2025</span>
-                                <span class="mono-tag">Data AI Lab, KAIST</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Undergraduate Research Intern</h3>
-                                <p class="entry-desc">Implemented and tested GNN baselines across multiple datasets, contributing experiments and ablations. Led a project on mitigating popularity bias in graph-based recommender systems.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Jan — Mar 2025</span>
-                                <span class="mono-tag">Enhans</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">AI Researcher</h3>
-                                <p class="entry-desc">Built an automatic LLM prompt-optimization pipeline that improved answer coherence by 10%, and a synthetic reasoning-chain generator for iterative prompt refinement.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Jun — Sep 2024</span>
-                                <span class="mono-tag">Networking &amp; Mobile Systems Lab, KAIST</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Research Intern</h3>
-                                <p class="entry-desc">Formulated and evaluated baselines for multivariate time-series imputation with missing modalities. Built a dynamic imputation framework to generate missing data points.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Jun — Sep 2023</span>
-                                <span class="mono-tag">SMILE Lab, KAIST</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Research Intern</h3>
-                                <p class="entry-desc">Optimized Hawkeye localization to sub-centimeter accuracy over 100 m using Fourier-domain filtering. Distinguished mobile and static tags to enable dynamic power scaling.</p>
-                            </div>
-                        </article>
-                    </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Sep 2021 — Aug 2025</p>
+                <div>
+                    <h3>B.S. · Computer Science</h3>
+                    <p class="organization">KAIST</p>
+                    <p class="entry-description">Minor in AI. Selected coursework: Statistical Learning Theory, Operations Research: Optimization, Algorithms, Operating Systems, Deep Learning, ML for Computer Vision, Data Science, and Wearable UIs.</p>
                 </div>
-            </div>
+            </article>
         </section>
-        <section id="research" class="research-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>03 / RESEARCH</span>Questions<br>I’m exploring.</h2>
+        <section id="experience" aria-labelledby="experience-heading">
+            <h2 id="experience-heading">Research experience</h2>
+            <article class="entry">
+                <p class="entry-date">Mar 2026 — Present</p>
+                <div>
+                    <h3>Visiting Researcher</h3>
+                    <p class="organization">Seoul National University</p>
+                    <p class="entry-description">Developing a unified foundation model for generative recommendation, targeting in-context item-token generation across datasets. Designing the end-to-end architecture and training recipe under Prof. Jaemin Yoo.</p>
                 </div>
-                <div class="col-content">
-                    <div class="output-list">
-                        <article class="output-card">
-                            <div class="card-header">
-                                <span class="card-type">Manuscript</span>
-                                <span class="card-year">Under review · KDD 2027</span>
-                            </div>
-                            <h3 class="card-headline">Beyond Node Degree: Learning-Driven Tailness for Graph Collaborative Filtering</h3>
-                            <p class="card-authors"><strong>Akotet Yeshaw Tesema</strong>, Biniyam Aschalew Tolera, Cheonwoo Lee, Jaemin Yoo.</p>
-                            <p class="card-authors">Under review at ACM SIGKDD (KDD) 2027.</p>
-                        </article>
-                    </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2026 — Present</p>
+                <div>
+                    <h3>Research Fellow</h3>
+                    <p class="organization">Equitech Futures</p>
+                    <p class="entry-description">Researching sycophancy in large language models with faculty and associate fellows. Designing evaluations and mitigation strategies to measure and reduce models’ tendency to over-agree with users at the expense of accuracy.</p>
                 </div>
-            </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Oct — Dec 2025</p>
+                <div>
+                    <h3>Applied Data Institute Scholar</h3>
+                    <p class="organization">Equitech Futures</p>
+                    <p class="entry-description">Selected among the top 20 scholars from 200+ applicants across 80+ countries. Collaborated on a water utility dashboard for selected African countries and researched conversational echo chambers in LLMs.</p>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Sep 2023 — Aug 2025</p>
+                <div>
+                    <h3>Undergraduate Research Intern</h3>
+                    <p class="organization">Data AI Lab, KAIST</p>
+                    <p class="entry-description">Implemented and tested GNN baselines across multiple datasets, contributing experiments and ablations. Led a project on mitigating popularity bias in graph-based recommender systems.</p>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Jan — Mar 2025</p>
+                <div>
+                    <h3>AI Researcher</h3>
+                    <p class="organization">Enhans</p>
+                    <p class="entry-description">Built an automatic LLM prompt-optimization pipeline that improved answer coherence by 10%, and a synthetic reasoning-chain generator for iterative prompt refinement.</p>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Jun — Sep 2024</p>
+                <div>
+                    <h3>Research Intern</h3>
+                    <p class="organization">Networking &amp; Mobile Systems Lab, KAIST</p>
+                    <p class="entry-description">Formulated and evaluated baselines for multivariate time-series imputation with missing modalities. Built a dynamic imputation framework to generate missing data points.</p>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Jun — Sep 2023</p>
+                <div>
+                    <h3>Research Intern</h3>
+                    <p class="organization">SMILE Lab, KAIST</p>
+                    <p class="entry-description">Optimized Hawkeye localization to sub-centimeter accuracy over 100 m using Fourier-domain filtering. Distinguished mobile and static tags to enable dynamic power scaling.</p>
+                </div>
+            </article>
         </section>
-        <section id="projects" class="projects-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>04 / PROJECTS</span>Ideas,<br>implemented.</h2>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Selected projects</h2>
+            <article class="entry">
+                <p class="entry-date">2026</p>
+                <div>
+                    <h3>Ad Recommendation</h3>
+                    <p class="organization">Personal project</p>
+                    <p class="entry-description">Built a UniMP-inspired GCN recommender on a heterogeneous user–search–ad graph, with a LightGCN baseline. Jointly optimized click prediction (F1) and ad ranking (NDCG@3) using negative sampling and Weights &amp; Biases.</p>
+
                 </div>
-                <div class="col-content">
-                    <div class="output-list">
-                        <article class="output-card bg-accent">
-                            <div class="card-header">
-                                <span class="card-type">Personal project</span>
-                                <span class="card-year">2026</span>
-                            </div>
-                            <h3 class="card-headline">Ad Recommendation</h3>
-                            <p class="card-authors">Built a UniMP-inspired GCN recommender on a heterogeneous user–search–ad graph, with a LightGCN baseline. Jointly optimized click prediction (F1) and ad ranking (NDCG@3) using negative sampling and Weights &amp; Biases.</p>
-                        </article>
-
-                        <article class="output-card">
-                            <div class="card-header">
-                                <span class="card-type">Personal project</span>
-                                <span class="card-year">2025</span>
-                            </div>
-                            <h3 class="card-headline">Multi-Behavior Recommendation — NGCF</h3>
-                            <p class="card-authors">Modeled hierarchical view/save/purchase signals on a 21K-user benchmark. Combined interaction-type classification (Macro-F1) and top-K ranking, benchmarking against LightGCN and MuLe.</p>
-                            <a href="https://github.com/Akotet08/multi-behaviour-modeling" target="_blank" rel="noopener noreferrer" class="card-link">View repository →</a>
-                        </article>
-
-                        <article class="output-card">
-                            <div class="card-header">
-                                <span class="card-type">Applied Data Institute</span>
-                                <span class="card-year">2025</span>
-                            </div>
-                            <h3 class="card-headline">Water Utility Performance Platform</h3>
-                            <p class="card-authors">Built Streamlit dashboards with role-based access and AI-generated insights for water and sanitation KPIs, supporting national-, city-, and zone-level monitoring from a shared data pipeline.</p>
-                        </article>
-
-                        <article class="output-card bg-accent">
-                            <div class="card-header">
-                                <span class="card-type">Personal project</span>
-                                <span class="card-year">2025</span>
-                            </div>
-                            <h3 class="card-headline">PromptOpt</h3>
-                            <p class="card-authors">Built a Dockerized critique-and-refine prompt optimizer using PromptWizard with OpenAI and Anthropic backends. Deployed on AWS with SQS-driven asynchronous job processing.</p>
-                        </article>
-
-                        <article class="output-card">
-                            <div class="card-header">
-                                <span class="card-type">Personal project</span>
-                                <span class="card-year">2023</span>
-                            </div>
-                            <h3 class="card-headline">Harvest ROS</h3>
-                            <p class="card-authors">Built an end-to-end strawberry-picking robot on TurtleBot3. Fine-tuned YOLOv5 for six-level ripeness classification and fused RGB with ultrasonic depth.</p>
-                        </article>
-
-                        <article class="output-card">
-                            <div class="card-header">
-                                <span class="card-type">Personal project</span>
-                                <span class="card-year">2022</span>
-                            </div>
-                            <h3 class="card-headline">ModiCharachorder</h3>
-                            <p class="card-authors">Built a custom input device with 12 buttons, an IMU, and TensorFlow GRU autocomplete.</p>
-                            <a href="https://github.com/Akotet08/ModiCharachorder" target="_blank" rel="noopener noreferrer" class="card-link">View repository →</a>
-                        </article>
-                    </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2025</p>
+                <div>
+                    <h3>Multi-Behavior Recommendation — NGCF</h3>
+                    <p class="organization">Personal project</p>
+                    <p class="entry-description">Modeled hierarchical view/save/purchase signals on a 21K-user benchmark. Combined interaction-type classification (Macro-F1) and top-K ranking, benchmarking against LightGCN and MuLe.</p>
+                    <a href="https://github.com/Akotet08/multi-behaviour-modeling" target="_blank" rel="noopener noreferrer" class="project-link">View repository →</a>
                 </div>
-            </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2025</p>
+                <div>
+                    <h3>Water Utility Performance Platform</h3>
+                    <p class="organization">Applied Data Institute</p>
+                    <p class="entry-description">Built Streamlit dashboards with role-based access and AI-generated insights for water and sanitation KPIs, supporting national-, city-, and zone-level monitoring from a shared data pipeline.</p>
+
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2025</p>
+                <div>
+                    <h3>PromptOpt</h3>
+                    <p class="organization">Personal project</p>
+                    <p class="entry-description">Built a Dockerized critique-and-refine prompt optimizer using PromptWizard with OpenAI and Anthropic backends. Deployed on AWS with SQS-driven asynchronous job processing.</p>
+
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2023</p>
+                <div>
+                    <h3>Harvest ROS</h3>
+                    <p class="organization">Personal project</p>
+                    <p class="entry-description">Built an end-to-end strawberry-picking robot on TurtleBot3. Fine-tuned YOLOv5 for six-level ripeness classification and fused RGB with ultrasonic depth.</p>
+
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2022</p>
+                <div>
+                    <h3>ModiCharachorder</h3>
+                    <p class="organization">Personal project</p>
+                    <p class="entry-description">Built a custom input device with 12 buttons, an IMU, and TensorFlow GRU autocomplete.</p>
+                    <a href="https://github.com/Akotet08/ModiCharachorder" target="_blank" rel="noopener noreferrer" class="project-link">View repository →</a>
+                </div>
+            </article>
         </section>
-        <section id="education" class="education-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>05 / EDUCATION</span>Foundations<br>for discovery.</h2>
+        <section id="teaching" aria-labelledby="teaching-heading">
+            <h2 id="teaching-heading">Teaching &amp; mentoring</h2>
+            <article class="entry">
+                <p class="entry-date">Summer 2026</p>
+                <div>
+                    <h3>Teaching Assistant</h3>
+                    <p class="organization">AddisCoder · Addis Ababa</p>
+                    <p class="entry-description">Mentored Ethiopian high-school students in Python programming and algorithm design during an intensive tuition-free summer program. Led daily labs in problem-solving and hands-on coding.</p>
                 </div>
-                <div class="col-content">
-                    <div class="timeline-wrapper">
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Sep 2025 — Present</span>
-                                <span class="mono-tag">KAIST</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">M.S. · Electrical Engineering</h3>
-                                <p class="entry-desc">Research areas: recommender systems, graph neural networks, and machine learning.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Sep 2021 — Aug 2025</span>
-                                <span class="mono-tag">KAIST</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">B.S. · Computer Science</h3>
-                                <p class="entry-desc">Minor in AI. Selected coursework: Statistical Learning Theory, Operations Research: Optimization, Algorithms, Operating Systems, Deep Learning, ML for Computer Vision, Data Science, and Wearable UIs.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+            </article>
         </section>
-        <section id="teaching" class="teaching-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>06 / TEACHING &amp; MENTORING</span>Learning,<br>together.</h2>
+        <section id="honors" aria-labelledby="honors-heading">
+            <h2 id="honors-heading">Honors &amp; leadership</h2>
+            <article class="entry">
+                <p class="entry-date">2025</p>
+                <div>
+                    <h3>Program Alumnus</h3>
+                    <p class="organization">Aspire Leaders Program</p>
+                    <p class="entry-description">Completed the Aspire Leaders Program.</p>
                 </div>
-                <div class="col-content">
-                    <div class="timeline-wrapper">
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Summer 2026</span>
-                                <span class="mono-tag">AddisCoder · Addis Ababa</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Teaching Assistant</h3>
-                                <p class="entry-desc">Mentored Ethiopian high-school students in Python programming and algorithm design during an intensive tuition-free summer program. Led daily labs in problem-solving and hands-on coding.</p>
-                            </div>
-                        </article>
-                    </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2024</p>
+                <div>
+                    <h3>Undergraduate Research Participation Excellence Award</h3>
+                    <p class="organization">KAIST</p>
+                    <p class="entry-description">Recognized for work on AI pest-attractant surveillance.</p>
                 </div>
-            </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2023</p>
+                <div>
+                    <h3>Top 5 of 180 Teams</h3>
+                    <p class="organization">Korea Customs Data-Science Challenge</p>
+                    <p class="entry-description">Developed a fake-import detection project.</p>
+                </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">2021 — 2023</p>
+                <div>
+                    <h3>Web Developer</h3>
+                    <p class="organization">KAIST International Students Association</p>
+                    <p class="entry-description">Contributed as a web developer for the international students association.</p>
+                </div>
+            </article>
         </section>
-        <section id="software" class="software-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>07 / IP &amp; SOFTWARE</span>Research<br>into practice.</h2>
+        <section id="software" aria-labelledby="software-heading">
+            <h2 id="software-heading">IP &amp; software</h2>
+            <article class="entry">
+                <p class="entry-date">Jun 2024</p>
+                <div>
+                    <h3>Community Energy-Mix Optimization System</h3>
+                    <p class="organization">Software registration · Korea</p>
+                    <p class="entry-description">Led a cross-functional team and built the optimization engine for a web app recommending regional renewable portfolios.</p>
                 </div>
-                <div class="col-content">
-                    <div class="timeline-wrapper">
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Jun 2024</span>
-                                <span class="mono-tag">Software registration · Korea</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Community Energy-Mix Optimization System</h3>
-                                <p class="entry-desc">Led a cross-functional team and built the optimization engine for a web app recommending regional renewable portfolios.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">Jan 2024</span>
-                                <span class="mono-tag">Software registration · Korea</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Building Remodeling Information &amp; Case-base System</h3>
-                                <p class="entry-desc">Designed the data model and cost-benefit algorithms for a sustainable retrofit database.</p>
-                            </div>
-                        </article>
-                    </div>
+            </article>
+            <article class="entry">
+                <p class="entry-date">Jan 2024</p>
+                <div>
+                    <h3>Building Remodeling Information &amp; Case-base System</h3>
+                    <p class="organization">Software registration · Korea</p>
+                    <p class="entry-description">Designed the data model and cost-benefit algorithms for a sustainable retrofit database.</p>
                 </div>
-            </div>
+            </article>
         </section>
-        <section id="honors" class="honors-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>08 / HONORS &amp; LEADERSHIP</span>Beyond<br>the lab.</h2>
-                </div>
-                <div class="col-content">
-                    <div class="timeline-wrapper">
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">2025</span>
-                                <span class="mono-tag">Aspire Leaders Program</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Program Alumnus</h3>
-                                <p class="entry-desc">Completed the Aspire Leaders Program.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">2024</span>
-                                <span class="mono-tag">KAIST</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Undergraduate Research Participation Excellence Award</h3>
-                                <p class="entry-desc">Recognized for work on AI pest-attractant surveillance.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">2023</span>
-                                <span class="mono-tag">Korea Customs Data-Science Challenge</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Top 5 of 180 Teams</h3>
-                                <p class="entry-desc">Developed a fake-import detection project.</p>
-                            </div>
-                        </article>
-
-                        <article class="timeline-entry">
-                            <div class="entry-meta">
-                                <span class="mono-date">2021 — 2023</span>
-                                <span class="mono-tag">KAIST International Students Association</span>
-                            </div>
-                            <div class="entry-details">
-                                <h3 class="entry-title">Web Developer</h3>
-                                <p class="entry-desc">Contributed as a web developer for the international students association.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical skills</h2>
+            <dl class="skills-list">
+                <div><dt>Languages</dt><dd>Python, C, Java, JavaScript, Bash</dd></div>
+                <div><dt>ML frameworks</dt><dd>PyTorch, TensorFlow</dd></div>
+                <div><dt>Tools</dt><dd>ROS, Django, Git, Linux</dd></div>
+            </dl>
         </section>
-        <section id="skills" class="skills-section bordered-section ">
-            <div class="content-grid">
-                <div class="col-title">
-                    <h2 class="section-title"><span>09 / TECHNICAL SKILLS</span>Tools<br>of the trade.</h2>
-                </div>
-                <div class="col-content">
-                    <div class="timeline-wrapper">
-                        <dl class="skills-list">
-                            <div><dt>Languages</dt><dd>Python · C · Java · JavaScript · Bash</dd></div>
-                            <div><dt>ML frameworks</dt><dd>PyTorch · TensorFlow</dd></div>
-                            <div><dt>Tools</dt><dd>ROS · Django · Git · Linux</dd></div>
-                        </dl>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-contact"><p class="mono-label">LET’S CONNECT</p><h2>Good research starts<br>with a conversation.</h2><a href="mailto:akiyeshaw@gmail.com">akiyeshaw@gmail.com ↗</a></div>
-        <div class="footer-inner reveal stagger-1">
-            <div class="footer-left">
-                <p class="brand">Akotet Yeshaw Tesema.</p>
-                <p class="mono-label">© 2026. ALL RIGHTS RESERVED.</p>
-            </div>
-            <div class="footer-right">
-                <a href="https://github.com/Akotet08" target="_blank" rel="noopener noreferrer"
-                    class="hover-line">GitHub</a>
-                <a href="https://www.linkedin.com/in/akotet-yeshaw/" target="_blank" rel="noopener noreferrer"
-                    class="hover-line">LinkedIn</a>
-                <a href="https://x.com/y_akotet" target="_blank" rel="noopener noreferrer" class="hover-line">Twitter</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        </main>
+        <footer>
+            <span>© 2026 Akotet Yeshaw Tesema</span>
+            <a href="#top">Back to top ↑</a>
+        </footer>
+    </div>
 </body>
-
 </html>
